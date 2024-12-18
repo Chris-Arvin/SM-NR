@@ -1,0 +1,175 @@
+<launch>
+
+  <!-- <arg name="AV_x" default="-3.2"/> -->
+  <arg name="AV_x" default="-4.0"/>
+  <arg name="AV_y" default="0.0"/>
+  <arg name="AV_theta" default="0.0"/>
+  
+  <!-- 当vehicle_number大于3时，标号4-n的车 都是静止停靠在路边的车 -->
+  <arg name="all_vehicle_number" default="18"/> 
+  <arg name="dynamic_vehicle_number" default="1"/> 
+
+  <!-- dynamic vehicles -->
+  <arg name="pose_initial_x1" default="1.6"/>
+  <arg name="pose_initial_y1" default="0.0"/>
+  <arg name="pose_initial_theta1" default="3.14"/>
+
+  <!-- static vehicles: y>0意味着车道左侧，theta in [1/2pi, 3/2pi] -->  
+  <arg name="pose_initial_x2" default="-3.0"/>
+  <arg name="pose_initial_y2" default="0.25"/>
+  <arg name="pose_initial_theta2" default="3.13"/>
+
+  <arg name="pose_initial_x3" default="-2.5"/>
+  <arg name="pose_initial_y3" default="0.25"/>
+  <arg name="pose_initial_theta3" default="3.13"/>
+
+  <arg name="pose_initial_x4" default="-2.0"/>
+  <arg name="pose_initial_y4" default="0.25"/>
+  <arg name="pose_initial_theta4" default="2.94"/>
+
+  <arg name="pose_initial_x5" default="-1.5"/>
+  <arg name="pose_initial_y5" default="0.32"/>
+  <arg name="pose_initial_theta5" default="3.13"/>
+
+  <arg name="pose_initial_x6" default="-1.1"/>
+  <arg name="pose_initial_y6" default="0.26"/>
+  <arg name="pose_initial_theta6" default="3.13"/>
+
+  <arg name="pose_initial_x18" default="-0.75"/>
+  <arg name="pose_initial_y18" default="0.24"/>
+  <arg name="pose_initial_theta18" default="3.13"/>
+
+  <arg name="pose_initial_x7" default="-0.45"/>
+  <arg name="pose_initial_y7" default="0.27"/>
+  <arg name="pose_initial_theta7" default="3.13"/>
+
+  <arg name="pose_initial_x8" default="0.0"/>
+  <arg name="pose_initial_y8" default="0.29"/>
+  <arg name="pose_initial_theta8" default="3.0"/>
+
+  <arg name="pose_initial_x9" default="0.5"/>
+  <arg name="pose_initial_y9" default="0.27"/>
+  <arg name="pose_initial_theta9" default="3.02"/>
+
+  <!-- static vehicles: y<0意味着车道左侧 -->  
+  <arg name="pose_initial_x10" default="-3.5"/>
+  <arg name="pose_initial_y10" default="-0.29"/>
+  <arg name="pose_initial_theta10" default="0.4"/>
+
+  <arg name="pose_initial_x11" default="-3.0"/>
+  <arg name="pose_initial_y11" default="-0.28"/>
+  <arg name="pose_initial_theta11" default="0.4"/>
+
+  <arg name="pose_initial_x12" default="-2.0"/>
+  <arg name="pose_initial_y12" default="-0.28"/>
+  <arg name="pose_initial_theta12" default="0.02"/>
+
+  <arg name="pose_initial_x13" default="-1.5"/>
+  <arg name="pose_initial_y13" default="-0.26"/>
+  <arg name="pose_initial_theta13" default="0.02"/>
+
+  <arg name="pose_initial_x14" default="-1.1"/>
+  <arg name="pose_initial_y14" default="-0.30"/>
+  <arg name="pose_initial_theta14" default="0.02"/>
+
+  <arg name="pose_initial_x15" default="0.0"/>
+  <arg name="pose_initial_y15" default="-0.30"/>
+  <arg name="pose_initial_theta15" default="0.02"/>
+
+  <arg name="pose_initial_x16" default="0.5"/>
+  <arg name="pose_initial_y16" default="-0.30"/>
+  <arg name="pose_initial_theta16" default="0.02"/>
+
+  <arg name="pose_initial_x17" default="1.0"/>
+  <arg name="pose_initial_y17" default="-0.28"/>
+  <arg name="pose_initial_theta17" default="-0.13"/>
+
+  <!-- car-like robot controller -->
+  <node name="simulate_social_car" type="simulate_social_car" pkg="vehicle_simulator" output="screen">
+    <param name="all_vehicle_number" value="$(arg all_vehicle_number)"/>
+    <param name="dynamic_vehicle_number" value="$(arg dynamic_vehicle_number)"/>
+
+    <param name="pose_initial_x1" value="$(arg pose_initial_x1)"/>
+    <param name="pose_initial_y1" value="$(arg pose_initial_y1)"/>
+    <param name="pose_initial_theta1" value="$(arg pose_initial_theta1)"/>
+
+    <param name="pose_initial_x2" value="$(arg pose_initial_x2)"/>
+    <param name="pose_initial_y2" value="$(arg pose_initial_y2)"/>
+    <param name="pose_initial_theta2" value="$(arg pose_initial_theta2)"/>
+
+    <param name="pose_initial_x3" value="$(arg pose_initial_x3)"/>
+    <param name="pose_initial_y3" value="$(arg pose_initial_y3)"/>
+    <param name="pose_initial_theta3" value="$(arg pose_initial_theta3)"/>
+  
+    <param name="pose_initial_x4" value="$(arg pose_initial_x4)"/>
+    <param name="pose_initial_y4" value="$(arg pose_initial_y4)"/>
+    <param name="pose_initial_theta4" value="$(arg pose_initial_theta4)"/>
+
+    <param name="pose_initial_x5" value="$(arg pose_initial_x5)"/>
+    <param name="pose_initial_y5" value="$(arg pose_initial_y5)"/>
+    <param name="pose_initial_theta5" value="$(arg pose_initial_theta5)"/>
+
+    <param name="pose_initial_x6" value="$(arg pose_initial_x6)"/>
+    <param name="pose_initial_y6" value="$(arg pose_initial_y6)"/>
+    <param name="pose_initial_theta6" value="$(arg pose_initial_theta6)"/>
+
+    <param name="pose_initial_x7" value="$(arg pose_initial_x7)"/>
+    <param name="pose_initial_y7" value="$(arg pose_initial_y7)"/>
+    <param name="pose_initial_theta7" value="$(arg pose_initial_theta7)"/>
+
+    <param name="pose_initial_x8" value="$(arg pose_initial_x8)"/>
+    <param name="pose_initial_y8" value="$(arg pose_initial_y8)"/>
+    <param name="pose_initial_theta8" value="$(arg pose_initial_theta8)"/>
+
+    <param name="pose_initial_x9" value="$(arg pose_initial_x9)"/>
+    <param name="pose_initial_y9" value="$(arg pose_initial_y9)"/>
+    <param name="pose_initial_theta9" value="$(arg pose_initial_theta9)"/>
+  
+    <param name="pose_initial_x10" value="$(arg pose_initial_x10)"/>
+    <param name="pose_initial_y10" value="$(arg pose_initial_y10)"/>
+    <param name="pose_initial_theta10" value="$(arg pose_initial_theta10)"/>
+
+
+    <param name="pose_initial_x11" value="$(arg pose_initial_x11)"/>
+    <param name="pose_initial_y11" value="$(arg pose_initial_y11)"/>
+    <param name="pose_initial_theta11" value="$(arg pose_initial_theta11)"/>
+      
+    <param name="pose_initial_x12" value="$(arg pose_initial_x12)"/>
+    <param name="pose_initial_y12" value="$(arg pose_initial_y12)"/>
+    <param name="pose_initial_theta12" value="$(arg pose_initial_theta12)"/>
+
+    <param name="pose_initial_x13" value="$(arg pose_initial_x13)"/>
+    <param name="pose_initial_y13" value="$(arg pose_initial_y13)"/>
+    <param name="pose_initial_theta13" value="$(arg pose_initial_theta13)"/>
+
+    <param name="pose_initial_x14" value="$(arg pose_initial_x14)"/>
+    <param name="pose_initial_y14" value="$(arg pose_initial_y14)"/>
+    <param name="pose_initial_theta14" value="$(arg pose_initial_theta14)"/>
+
+    <param name="pose_initial_x15" value="$(arg pose_initial_x15)"/>
+    <param name="pose_initial_y15" value="$(arg pose_initial_y15)"/>
+    <param name="pose_initial_theta15" value="$(arg pose_initial_theta15)"/>
+
+    <param name="pose_initial_x16" value="$(arg pose_initial_x16)"/>
+    <param name="pose_initial_y16" value="$(arg pose_initial_y16)"/>
+    <param name="pose_initial_theta16" value="$(arg pose_initial_theta16)"/>
+
+    <param name="pose_initial_x17" value="$(arg pose_initial_x17)"/>
+    <param name="pose_initial_y17" value="$(arg pose_initial_y17)"/>
+    <param name="pose_initial_theta17" value="$(arg pose_initial_theta17)"/>
+
+    <param name="pose_initial_x18" value="$(arg pose_initial_x18)"/>
+    <param name="pose_initial_y18" value="$(arg pose_initial_y18)"/>
+    <param name="pose_initial_theta18" value="$(arg pose_initial_theta18)"/>
+
+  </node>
+
+  <node name="simulate_automated_car" type="simulate_automated_car" pkg="vehicle_simulator" output="screen">
+    <param name="pose_initial_x" value="$(arg AV_x)"/>
+    <param name="pose_initial_y" value="$(arg AV_y)"/>
+    <param name="pose_initial_theta" value="$(arg AV_theta)"/>
+  </node>
+
+
+
+</launch>

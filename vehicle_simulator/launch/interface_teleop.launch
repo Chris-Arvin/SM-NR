@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="vehicle_simulator" name="interface_teleop" type="interface_teleop_simple.py" output="screen">
+    <rosparam file="$(find wheeltec_description)/param/robot_constrains.yaml" command="load" ns="teleop"/>
+  </node>
+</launch>

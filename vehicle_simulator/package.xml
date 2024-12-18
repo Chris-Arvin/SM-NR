@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<package>
+  <name>vehicle_simulator</name>
+  <version>0.1.1</version>
+  <description>
+    Pedestrian Simulator: a social force model based simulation of pedestrians and their activities including, walking, grouping, etc
+  </description>
+
+  <author email="okal@cs.uni-freiburg.de">Billy Okal</author>
+  <author email="omar@email.todo">Omar Islas</author>
+
+  <maintainer email="okal@cs.uni-freiburg.de">Billy Okal</maintainer>
+  <maintainer email="omar@email.todo">Omar Islas</maintainer>
+  <maintainer email="zhangqianyi@mail.nankai.edu.cn">Arvin</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">https://github.com/srl-freiburg/pedsim_ros</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>visualization_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>message_runtime</build_depend>
+
+  <run_depend>tf</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>visualization_msgs</run_depend>
+  <run_depend>nav_msgs</run_depend>
+  <run_depend>message_generation</run_depend>
+  <run_depend>message_runtime</run_depend>
+
+  <!-- <exec_depend>message_runtime</exec_depend> -->
+
+</package>

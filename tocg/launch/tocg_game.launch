@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="tocg" name="tocg_node" type="tocg_node" output="screen">
+  </node>
+</launch>

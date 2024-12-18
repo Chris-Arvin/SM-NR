@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario>
+    <!--Obstacles-->
+        <!-- borders of corridor, PLEASE DO NOT DELETE-->
+        <obstacle x1="-5" y1="-0.46" x2="5" y2="-0.46" type="line"/>
+        <obstacle x1="-5" y1="0.46" x2="5" y2="0.46" type="line"/>
+</scenario>

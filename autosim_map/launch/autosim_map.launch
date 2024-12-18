@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="autosim_map" name="autosim_fakemap" type="autosim_map_node" output="screen">
+    <rosparam file="$(find autosim_map)/params/sim_map.yaml" command="load" />
+  </node>
+</launch>

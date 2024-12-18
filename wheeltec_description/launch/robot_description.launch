@@ -1,0 +1,213 @@
+<launch>
+  <arg name="car_mode"  default="mini_akm" />
+  <arg name="model" default="$(find xacro)/xacro --inorder '$(find wheeltec_description)/urdf/$(arg car_mode)/$(arg car_mode).xacro'"/>
+
+  <!-- 调用xacro文件解析器 将对应车型的xacro文件转为urdf文件 -->
+  <group ns="AV">
+    <param name="robot_description" command="$(arg model)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  output="screen" >
+      <param name="publish_frequency" type="double" value="50.0" /> <!--发布频率-->
+    </node>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+    </node>
+  </group>
+
+  <group ns="robot1">
+    <param name="robot_description" command="$(arg model)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  output="screen" >
+      <param name="tf_prefix" value="robot1" />
+      <param name="publish_frequency" type="double" value="50.0" /> <!--发布频率-->
+    </node>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+      <param name="tf_prefix" value="robot1" />
+    </node>
+  </group>
+
+  <group ns="robot2">
+    <param name="robot_description" command="$(arg model)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  output="screen" >
+      <param name="tf_prefix" value="robot2" />
+      <param name="publish_frequency" type="double" value="50.0" /> <!--发布频率-->
+    </node>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+      <param name="tf_prefix" value="robot2" />
+    </node>
+  </group>
+
+  <group ns="robot3">
+    <param name="robot_description" command="$(arg model)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  output="screen" >
+      <param name="tf_prefix" value="robot3" />
+      <param name="publish_frequency" type="double" value="50.0" /> <!--发布频率-->
+    </node>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+      <param name="tf_prefix" value="robot3" />
+    </node>
+  </group>
+
+  <group ns="robot4">
+    <param name="robot_description" command="$(arg model)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  output="screen" >
+      <param name="tf_prefix" value="robot4" />
+      <param name="publish_frequency" type="double" value="50.0" /> <!--发布频率-->
+    </node>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+      <param name="tf_prefix" value="robot4" />
+    </node>
+  </group>
+
+  <group ns="robot5">
+    <param name="robot_description" command="$(arg model)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  output="screen" >
+      <param name="tf_prefix" value="robot5" />
+      <param name="publish_frequency" type="double" value="50.0" /> <!--发布频率-->
+    </node>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+      <param name="tf_prefix" value="robot5" />
+    </node>
+  </group>
+
+  <group ns="robot6">
+    <param name="robot_description" command="$(arg model)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  output="screen" >
+      <param name="tf_prefix" value="robot6" />
+      <param name="publish_frequency" type="double" value="50.0" /> <!--发布频率-->
+    </node>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+      <param name="tf_prefix" value="robot6" />
+    </node>
+  </group>
+
+  <group ns="robot7">
+    <param name="robot_description" command="$(arg model)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  output="screen" >
+      <param name="tf_prefix" value="robot7" />
+      <param name="publish_frequency" type="double" value="50.0" /> <!--发布频率-->
+    </node>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+      <param name="tf_prefix" value="robot7" />
+    </node>
+  </group>
+
+  <group ns="robot8">
+    <param name="robot_description" command="$(arg model)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  output="screen" >
+      <param name="tf_prefix" value="robot8" />
+      <param name="publish_frequency" type="double" value="50.0" /> <!--发布频率-->
+    </node>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+      <param name="tf_prefix" value="robot8" />
+    </node>
+  </group>
+
+  <group ns="robot9">
+    <param name="robot_description" command="$(arg model)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  output="screen" >
+      <param name="tf_prefix" value="robot9" />
+      <param name="publish_frequency" type="double" value="50.0" /> <!--发布频率-->
+    </node>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+      <param name="tf_prefix" value="robot9" />
+    </node>
+  </group>
+
+  <group ns="robot10">
+    <param name="robot_description" command="$(arg model)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  output="screen" >
+      <param name="tf_prefix" value="robot10" />
+      <param name="publish_frequency" type="double" value="50.0" /> <!--发布频率-->
+    </node>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+      <param name="tf_prefix" value="robot10" />
+    </node>
+  </group>
+
+  <group ns="robot11">
+    <param name="robot_description" command="$(arg model)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  output="screen" >
+      <param name="tf_prefix" value="robot11" />
+      <param name="publish_frequency" type="double" value="50.0" /> <!--发布频率-->
+    </node>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+      <param name="tf_prefix" value="robot11" />
+    </node>
+  </group>
+
+  <group ns="robot12">
+    <param name="robot_description" command="$(arg model)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  output="screen" >
+      <param name="tf_prefix" value="robot12" />
+      <param name="publish_frequency" type="double" value="50.0" /> <!--发布频率-->
+    </node>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+      <param name="tf_prefix" value="robot12" />
+    </node>
+  </group>
+
+  <group ns="robot13">
+    <param name="robot_description" command="$(arg model)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  output="screen" >
+      <param name="tf_prefix" value="robot13" />
+      <param name="publish_frequency" type="double" value="50.0" /> <!--发布频率-->
+    </node>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+      <param name="tf_prefix" value="robot13" />
+    </node>
+  </group>
+
+  <group ns="robot14">
+    <param name="robot_description" command="$(arg model)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  output="screen" >
+      <param name="tf_prefix" value="robot14" />
+      <param name="publish_frequency" type="double" value="50.0" /> <!--发布频率-->
+    </node>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+      <param name="tf_prefix" value="robot14" />
+    </node>
+  </group>
+
+  <group ns="robot15">
+    <param name="robot_description" command="$(arg model)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  output="screen" >
+      <param name="tf_prefix" value="robot15" />
+      <param name="publish_frequency" type="double" value="50.0" /> <!--发布频率-->
+    </node>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+      <param name="tf_prefix" value="robot15" />
+    </node>
+  </group>
+
+  <group ns="robot16">
+    <param name="robot_description" command="$(arg model)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  output="screen" >
+      <param name="tf_prefix" value="robot16" />
+      <param name="publish_frequency" type="double" value="50.0" /> <!--发布频率-->
+    </node>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+      <param name="tf_prefix" value="robot16" />
+    </node>
+  </group>
+
+  <group ns="robot17">
+    <param name="robot_description" command="$(arg model)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  output="screen" >
+      <param name="tf_prefix" value="robot17" />
+      <param name="publish_frequency" type="double" value="50.0" /> <!--发布频率-->
+    </node>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+      <param name="tf_prefix" value="robot17" />
+    </node>
+  </group>
+
+  <group ns="robot18">
+    <param name="robot_description" command="$(arg model)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  output="screen" >
+      <param name="tf_prefix" value="robot18" />
+      <param name="publish_frequency" type="double" value="50.0" /> <!--发布频率-->
+    </node>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+      <param name="tf_prefix" value="robot18" />
+    </node>
+  </group>
+
+</launch>

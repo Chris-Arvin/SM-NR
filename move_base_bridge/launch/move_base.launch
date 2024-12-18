@@ -1,0 +1,23 @@
+<launch>
+
+  <!-- move_base, Timed elastic band -->
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />
+    <rosparam file="$(find move_base_bridge)/move_base_param/move_base_params.yaml" command="load" />
+    <rosparam file="$(find move_base_bridge)/algorithm_param/teb_local_planner_params.yaml" command="load" />
+
+    <rosparam file="$(find move_base_bridge)/costmap_param/static_local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find move_base_bridge)/costmap_param/static_global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find move_base_bridge)/costmap_param/costmap_converter_params.yaml" command="load" /> 
+    <rosparam file="$(find move_base_bridge)/costmap_param/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find move_base_bridge)/costmap_param/costmap_common_params.yaml" command="load" ns="local_costmap" />
+
+    <rosparam file="$(find wheeltec_description)/param/robot_constrains.yaml" command="load" ns="TebLocalPlannerROS"/>
+    <rosparam file="$(find wheeltec_description)/param/robot_constrains.yaml" command="load" ns="global_costmap"/>
+    <rosparam file="$(find wheeltec_description)/param/robot_constrains.yaml" command="load" ns="local_costmap"/>
+  </node>
+
+  <include file="$(find teb_local_planner)/launch/dynamic_obstacle_trans.launch"/>
+
+
+</launch>
