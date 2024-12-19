@@ -1,5 +1,5 @@
 # SM-NR
-This is the source code of the SM-NR [**SM-NR: Scene Modeling of Autonomous Vehicles Avoiding Stationary and Moving Vehicles on Narrow Roads**](https://arxiv.org/abs/2409.10009), an approach focused on the navigation on narrow roads.
+This is the source code of the SM-NR [**SM-NR: Scene Modeling of Autonomous Vehicles Avoiding Stationary and Moving Vehicles on Narrow Roads**](https://arxiv.org/abs/2412.13305), an approach focused on the navigation on narrow roads.
 [![](https://github.com/user-attachments/assets/530769a5-7a3b-436d-a179-2167a4841c06)](https://www.youtube.com/watch?v=9uhLzXsn28w)
 
 
